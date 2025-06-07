@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aviso de Virus</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+            padding: 50px;
+        }
+        .virus-alert {
+            border: 5px solid #f00;
+            padding: 20px;
+            margin-top: 50px;
+            background-color: #333;
+        }
+        .virus-alert h1 {
+            color: #f00;
+        }
+        .virus-alert p {
+            font-size: 18px;
+        }
+        .download-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="virus-alert">
+        <h1>¡Alerta de Virus!</h1>
+        <p>Tu dispositivo ha sido infectado por un virus peligroso. Haz clic en el botón a continuación para descargar la solución de seguridad recomendada.</p>
+        <button class="download-button" onclick="downloadFile()">Descargar Solución</button>
+    </div>
+
+    <script>
+        function downloadFile() {
+            const link = document.createElement('a');
+            link.href = 'data:text/plain;charset=utf-8,Tu dispositivo ha sido infectado por un virus peligroso!';
+            link.download = 'virus_solution.txt';
+            link.click();
+        }
+    </script>
+</body>
+</html>
